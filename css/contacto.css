@@ -1,0 +1,108 @@
+/*
+Author: Franca CS - 2013
+Sitio de presentación Franca Creative Studio 
+*/
+@charset "utf-8";
+/* CSS Document */
+form {
+	text-align: center;	
+	color:#000;
+	width: 100%;	
+	display:block;
+	margin-top:10px;
+
+	}
+form input{
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	width:100%;
+	height: 15%;
+	margin-bottom:1%;
+	box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	-webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	-moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	border:1px solid #CCC;
+	background:rgba(255,255,255,0.8);
+	border-radius:1px;
+	resize:none;
+	}
+form textarea{
+	width: 100%;
+	height:37%;		
+	margin-bottom:1%;
+	box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	-webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	-moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	border:1px solid #CCC;
+	background:rgba(255,255,255,0.8);
+	border-radius:1px;
+	resize:none;
+	}
+form input[type="text"]:hover, form input[type="email"]:hover, form input[type="tel"]:hover, form input[type="url"]:hover, form textarea:hover{
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;			
+	border:1px solid #AAA;
+	}
+form input:focus, form textarea:focus {
+	outline:0;
+	border:1px solid #999;
+	resize:none;
+	}
+form button[type="submit"] {
+	cursor:pointer;
+	width:30%;
+	height:10%;
+	line-height:11%;
+	padding:2%;			
+	border:none;
+	border-radius:2px;			
+	color:#000;
+	background:#80cbeb;
+	margin-bottom:0;
+	}
+form button[type="submit"]:hover {
+	background:#208494;
+	color:#000;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+	}
+form button[type="submit"]:active {
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+	}
+/*------------------------------Media Querys------------*/
+/*-----------------------------------------------------100*/
+@media screen and (min-width: 100px) {
+
+
+}/*fin min 100*/
+/*-----------------------------------------------------320*/
+@media screen and (min-width: 320px) {
+
+}/*fin min 320*/
+/*-----------------------------------------------------480*/
+@media screen and (min-width:480px) {
+
+
+}/*fin min 480*/
+/*-----------------------------------------------------768*/
+@media screen and (min-width: 768px) {
+form input{
+	height: 10%;
+	margin-bottom:2%;
+	}
+form textarea{
+	height:50%;		
+	margin-bottom:2%;
+	}
+form button[type="submit"] {
+	height:8%;
+	line-height:9%;
+	padding:2%;			
+	}
+
+}/*fin min 768*/
+/*-----------------------------------------------------1200*/
+@media screen and (min-width: 1200px) {
+
+}

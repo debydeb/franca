@@ -1,0 +1,91 @@
+/*
+Author: Franca CS - 2013
+Sitio de presentación Franca Creative Studio 
+*/
+@charset "utf-8";
+/* CSS Document */
+/*80cbeb     5ca6c1     208494*/
+/*--------------------------------------------------------------------GENERALES*/
+@font-face{
+    font-family: "Signika-Light";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("../font/Signika-Light.ttf") format("ttf"), url("../font/Signika-Light.ttf") format("truetype");
+	}
+@font-face{
+    font-family: "Entypo";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("../font/entypo.ttf") format("ttf"), url("../font/entypo.ttf") format("truetype");
+	}
+* {
+	border:0;
+	margin:0px;
+	padding:0px;
+	}
+body {
+	font-family: "Signika-Light", "Entypo";
+	background:url('../img/textura-1.png') repeat ;
+	overflow: hidden;
+	}
+a {
+	 text-decoration:none;
+	}
+.clear{
+	clear:both;
+	}	
+#wrapper{
+	position:relative;
+	}	
+.container {
+	position:absolute;
+	top:0%;
+	left:0%;
+	text-align:center;
+	background:url('../img/franca.png')center center;
+	background-size:auto 70%;
+	background-repeat:no-repeat;
+	}
+/*--------------------------------------------------------------------MENU*/
+nav {
+	color: rgb(0, 0, 0);
+	position:fixed;
+	left:0%;
+	bottom:0%;
+	background-color:#80cbeb;
+	height:65px;
+	text-align:left;
+	}	
+nav img {
+
+	margin-left:10px;
+	height:55px;
+	margin-top:5px;
+	width:55px;
+	}
+nav:hover {
+	background-color:#5ca6c1;
+	color(190,190,190);
+	-webkit-transition:background 0.5s ease-in-out;
+	-moz-transition:background 0.5s ease-in-out;
+	transition:background-color 0.5s ease-in-out;
+	cursor:pointer;
+	}	
+/*--------------------------------------------------------------------secciones general*/		
+#section{
+	width:100%;
+	top:0;
+	left:0;
+	background:rgba(0, 40, 46,0.6);
+	border-top:5px solid #80cbeb;
+	overflow:hidden;
+	padding:50px 0;
+	}
+#section h2{
+	color:#fff;
+	margin:20px 0;
+	}	
+#section img{
+	width:90%;
+	margin-bottom:20px;
+	}	
