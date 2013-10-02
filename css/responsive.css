@@ -25,9 +25,8 @@ Sitio de presentación Franca Creative Studio
 	}
 body {
 	font-family: "Signika-Light", "Entypo";
-	/*background:url('../img/textura-1.png') repeat ;*/
-	background:url('../img/fondo.png') center ;
-	background-size:100%;
+	background:url('../img/fondo.jpg') center;
+	background-size:100% 100%;
 	overflow: hidden;
 	}
 a {
@@ -70,7 +69,18 @@ ul {
 .this{
 	background:#208494;
 	}
-
+.grilla{
+	margin-left:5%;
+	padding:0px;
+	background:rbga(0,0,0,0.5);
+	}
+.show{
+	position:absolute;
+	padding:0px;
+	overflow:hidden;
+	padding-top:10px;
+	background:rgba(0,0,0,0.5);
+	}
 /*--------------------------------------------------------------------MENU*/
 nav {
 	color: rgb(0, 0, 0);
@@ -102,11 +112,10 @@ nav li:hover {
 /*--------------------------------------------------------------------secciones general*/		
 #section{
 	width:100%;
-	/*top:100%;*/
 	top:0%;
 	left:0;
 	display:none;
-	background:rgba(0, 40, 46,0.6);
+	background:rgba(0, 40, 46,0.8);
 	border-top:5px solid #80cbeb;
 	}
 #contacto, #serv, #port, #social{
@@ -114,39 +123,26 @@ nav li:hover {
 	background:none;
 	}
 /*--------------------------------------------SERVICIOS----------*/
-#text{
+.grilla h2{
 	color:#fff;
-	position:absolute;
-	overflow:hidden;
-	padding:10px;
-	margin-left:8%;
-	background:rgba(0,0,0,0.5);
-	text-align:left;
-	width:80%;
-	}
-#text h2{
-	color:#80cbeb;
 	font-size:22px;
 	font-weight:bold;
-	margin-bottom:8px;
-	padding-bottom:10px;
+	padding:10px 0;
 	border-bottom:2px solid #80cbeb;
+	background:#208494;
 	}
-#text p, #text ul{
+.grilla p, #servlist{
 	text-align:left;
 	font-size:16px;
 	line-height:20px;
+	color:#fff;
+	padding:10px;
 	}
-#text ul{
+#servlist{
 	color:#80cbeb;
 	font-weight:bold;
-	margin-top:5px;
-	}	/*80cbeb     5ca6c1     208494*/
-/*--------------------------------------------PORTFOLIO----------*/
-#grilla{
-	margin-left:5%;
-	padding:0px;
 	}
+/*--------------------------------------------PORTFOLIO----------*/	
 #slide{
 	width:100%;
 	border-bottom:2px solid #80cbeb;
@@ -161,18 +157,12 @@ nav li:hover {
 #slide li img{
 	width:30px;
 	}
-#slide li:hover{
+#slide li:hover, #country li:hover{
 	background:#208494;
 	-webkit-transition:background 0.5s ease-in-out;
 	-moz-transition:background 0.5s ease-in-out;
 	transition:background-color 0.5s ease-in-out;
 	cursor:pointer;
-	}
-.show{
-	position:absolute;
-	padding:0px;
-	overflow:hidden;
-	margin-top:10px;
 	}
 .show img{
 	margin:5px;
@@ -188,7 +178,7 @@ nav li:hover {
 	}	
 #display{
 	position:absolute;
-	background:url('../img/textura-1.png') repeat rgb(0, 40, 46);
+	background:rgb(0, 40, 46);
 	z-index:1;
 	left:0;
 	top:0;
@@ -204,94 +194,64 @@ nav li:hover {
 #display .control:hover{
 	cursor:pointer;
 	}
-
 /*--------------------------------------------CONTACTO----------*/
-#formap{
-	width:80%;
-	padding:0px;
-	margin-left:10%;
-	}
-#more{
-	width:100%;	
+#country{
+	width:100%;
 	border-bottom:2px solid #80cbeb;
-	}
-#more li{
-	float:left;
-	width:33.3%;
-	height:30px;
-	padding:5px 0px;
-	}
-#more li img{
-	width:30px;
-	}
-#more li:hover {
-	background-color:#208494;
-	color(190,190,190);
-	-webkit-transition:background 0.5s ease-in-out;
-	-moz-transition:background 0.5s ease-in-out;
-	transition:background-color 0.5s ease-in-out;
-	cursor:pointer;
-	}	
-#listcont {
-	position:absolute;
-	overflow:hidden;
-	display:none;
-	background:rgba(0,0,0,0.5);
-	width:80%;
-	left:10%;
-	margin-top:10px;
-	}	
-#listcont li{
-	width:100%;
 	text-align:center;
-	height:30px;
-	line-height:30px;
-	color:#fff;
-	font-weight:bold;
-	font-size:14px;
 	}
-#listcont  #first{
-	color:#80cbeb;
-	margin-top:10px;
-	}	
-#map{
-	width:100%;
-	display:none;
-	color:#fff;
-	margin-top:10px;
-	}
-#map ul{
-	height:30px;
-	margin-bottom:10px;
-	}
-#map ul li{
-	background:#208494;
+#country li{
 	width:50%;
 	float:left;
-	height:30px;
-	line-height:30px;
+	color:#fff;
+	font-weight:bold;
+	padding: 7px 0px;
+	}		
+#cont{
+	width:30%;
+	margin: 10px 0 0 10px;
+	}
+#listcont1, #listcont2{
+	color:#fff;
+	border-top:2px solid #80cbeb;
+	margin-top:20px;
+	padding-top:10px;
+	text-align:right;
+	height:110px;
 	}	
-#map ul li:hover{
-	background:#80cbeb;
-	cursor:pointer;
-	}
-#mapger, #maparg{
-	color:#fff;
-	background:rgba(0,0,0,0.5);
-	position:absolute;
-	overflow:hidden;
-	left:50%;
+#listcont1{
+	width:27%;
+	margin-left:2%;
+	float:left;
+	}		
+#listcont2{
+	width:98%;
+	margin-left:1%;
+	height:110px;
+	}		
+.map{
+	float:right;
 	padding:0px;
+	height:270px;
 	}
-#mapger a, #maparg a{
-	color:#fff;
-	}
-#mapger{
-	display:none;
-	}
-.where{
+#maparg{
+	height:98%;
 	width:100%;
-	margin:0px;
+	margin-top:10px;
+	}
+#ger{
+	display:none;
+	}	
+#mapger{
+	display:block;
+	width:100%;
+	padding:0px;
+	height:270px;
+	}
+#mapg{
+	margin:0px auto;
+	width:98%;
+	height:270px;
 	}
 /*--------------------------------------------SOCIAL----------*/
 #fb{
@@ -308,8 +268,12 @@ nav li:hover {
 	height:100px;
 	width:200px;	
 	margin: 0 auto;
-	}	
-/*------------------------------Media Querys------------*/
+	}		
+/*-------------------------------------------
+					
+					Media Querys
+
+-----------------------------------------*/
 /*-----------------------------------------------------100*/
 @media screen and (min-width: 100px) {
 
@@ -318,16 +282,18 @@ nav li img{
 	}
 .show img{
 	width:35%;
-	}		
-#formap, #text{
-	width:90%;
-	margin-left:3%;
 	}
-#mapger, #maparg{
-	width:90%;
-	margin-left:-47%;
+#listcont1{
+	width:96%;
+	margin-left:2%;
+	float:left;
 	}
-
+#cont{
+	width:90%;
+	}
+.map{
+	display:none;
+	}	
 #fb{
 	display:none; 
 	}
@@ -341,21 +307,11 @@ nav li img{
 .show img{
 	width:30%;
 	}
-#text{
-	font-size:14px;
-	}	
-#formap, #text{
+#cont{
 	width:70%;
 	margin-left:15%;
 	}
-#mapger, #maparg{
-	width:70%;
-	margin-left:-35%;
-	}
-#listcont {
-	width:70%;
-	left:15%;
-	}
+
 }/*fin min 320*/
 /*-----------------------------------------------------480*/
 @media screen and (min-width:480px) {
@@ -366,17 +322,20 @@ nav li img{
 .show img{
 	width:25%;
 	}	
-#formap, #text{
-	width:50%;
-	margin-left:25%;
+#cont{
+	width:47%;
+	margin-left:10px;
 	}
-#mapger, #maparg{
-	width:50%;
-	margin-left:-25%;
+#listcont1{
+	width:47%;
+	margin-left:10px;
 	}
-#listcont {
-	width:40%;
-	left:30%;
+.map{
+	display:block;
+	width:48%;
+	margin-bottom:0px;
+	margin-right:10px;
+	height:420px;
 	}
 }/*fin min 480*/
 /*-----------------------------------------------------768*/
@@ -385,17 +344,23 @@ nav li img{
 .show img{
 	width:200px;
 	}	
-#formap,#text{
-	width:40%;
-	margin-left:30%;
+.grilla p, #servlist{
+	margin:0px auto;
+	width:50%;
+	}	
+	
+#cont{
+	width:35%;
+	margin-left:10px;
 	}
-#mapger, #maparg{
-	width:40%;
-	margin-left:-20%;
+#listcont1{
+	width:35%;
+	margin-left:10px;
 	}
-#listcont {
-	width:30%;
-	left:35%;
+.map{
+	width:60%;
+	margin-right:10px;
+	height:420px;
 	}
 #fb{
 	display:block;
@@ -405,29 +370,30 @@ nav li img{
 	}
 }/*fin min 768*/
 /*-----------------------------------------------------1200*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px){
 
-#formap{
-	width:400px;
-	margin:0 auto;	
+.container {
+	background-size:auto 50%;
+
 	}
-#mapger, #maparg{
-	width:400px;
-	margin-left:-200px;
+.grilla{
+	width:800px;
 	}
-#text{
-	width:400px;
-	left:50%;
-	margin-left:-210px;	
+.grilla p, #servlist{
+	margin:0px auto;
+	width:27%;
 	}	
 #cont{
-	width:250px;
-	margin:15px auto 0px;
-}
-#listcont{
-	width:400px;
-	left:50%;
-	margin-left:-200px;
+	width:30%;
+	margin: 10px 0 0 20px;
+	}
+#listcont1{
+	width:30%;
+	margin-left:20px;
+	}
+.map{
+	width:65%;
+	height:400px;
 	}
 #fb{
 	display:block;

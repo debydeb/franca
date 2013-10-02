@@ -17,31 +17,11 @@
 	<link rel="icon" type="image/jpg" href="img/favicon.png" /> 
 
 	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
 	<script src="js/javascript.js"></script> 
-	<script src="js/jquery.mousewheel.js"></script>
-    <script src="js/perfect-scrollbar.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function ($){
-			$('.show').perfectScrollbar({
-				wheelSpeed: 20,
-				wheelPropagation: false
-			});
-			$('#text').perfectScrollbar({
-				wheelSpeed: 20,
-				wheelPropagation: false
-			});
-			$('#maparg').perfectScrollbar({
-				wheelSpeed: 20,
-				wheelPropagation: false
-			});
-			$('#mapger').perfectScrollbar({
-				wheelSpeed: 20,
-				wheelPropagation: false
-			});
-			$('#listcont').perfectScrollbar({
-				wheelSpeed: 20,
-				wheelPropagation: false
-			});
+			$(".show").niceScroll();
 		});
 	</script>
 
@@ -53,7 +33,6 @@
   ga('create', 'UA-43505409-1', 'francastudio.com');
   ga('send', 'pageview');
 </script>
-
 </head>
 <body>
 	<div id="wrapper">
@@ -63,37 +42,42 @@
 	<div class="container" id="section">
 		<!---------------------------------servicios--------------------------->	
 		<div class="container" id="serv">
-			<div id="text">
+			<div class="grilla" id="servs">
 				<h2>Franca Creative Studio</h2>
-				<br/>
+				<div class="show" id="text">
 				<p>
-				Is an international Media agency based in Web developments.
+				Is an international Media agency focusing in Web developments.
 				<br/>
-				We communicate clearly and transform your idea in your core communication tool.
-				<br/><br/>
+				We transform your core comunication tools bringing your ideas to life.
+				<br/>
 				What we do best:
-				<br/><br/>
-					<ul>
-						<li>Advertising and marketing campaigns</li>
+				</p>
+					<ul id="servlist">
+						<li>Web developments</li>
+						<li>Innovative graphic design</li>
+						<li>Photography</li>
 						<li>Media content development</li>
 						<li>Audiovisual content and development</li>
-						<li>Innovative graphic design</li>
-						<li>In and out mapping</li>
-						<li>Photography</li>
-						<li>Web developments</li>
 						<li>Social media</li>
+						<li>Advertising and marketing campaigns</li>
+						<li>In and out mapping</li>	
 					</ul>
-				<br/><br/>
-				Our offices are based in Buenos Aires, Argentina and have partners around 
-				the world who can help you in-site to be by your side during your product development.
+				<br/>
+				<p>
+				Our offices are based in Buenos Aires, Argentina
+				and we have partners all around the world, including our London and Berlin offices run by 
+				Pepe Burton Global Communications. 
+				<br/>
+				Remotely or on-site we will be by your side throughout your product development.
 				</p>
+				</div><!--class show-->
 			</div>
 		</div><!-----------------fin servicios------------------>	
 		<!---------------------------------portfolio--------------------------->	
 		<div class="container" id="port">
-				<div id="grilla">
+				<div class="grilla" id="port2">
 					<ul id="slide">
-						<li id="s1">
+						<li id="s1" class="this">
 								<img src="img/web.png" title="web development"/>
 						</li>
 						<li id="s2">
@@ -140,52 +124,43 @@
 		</div><!-----------------fin portfolio------------------>
 		<!----------------------------------contacto-------------------------->	
 		<div class="container" id="contacto">
-			<div id="formap">
-			<ul id="more">
-					<li id="mail"><img src="img/icono-mail2.png" title="e-mail"/></li>
-					<li id="phone"><img src="img/phone-icon.png" title="phone"/></li>
-					<li id="map1"><img src="img/mapa-icon.png" title="map"/></li>
-					<div class="clear"></div>
-				</ul>
+			<div class="grilla" id="contact">
+			<ul id="country">
+				<li id="c1" class="this">Buenos Aires</li>
+				<li id="c2">Berlin</li>
+				<div class="clear"></div>
+			</ul>
+			<div id="arg" class="show">
+				<a class="map" target="_blank" href="https://mapsengine.google.com/map/edit?mid=zHQzkXwGMpEY.kr07Fc7Luu-M">
+					<iframe id="maparg" frameborder="0" scrolling="no" src="https://maps.google.com/maps?q=Villarroel+1126,+Buenos+Aires&amp;ie=UTF8&amp;hl=es&amp;view=map&amp;ftt=9&amp;geocode=FQkj8P0dMTiE_A&amp;split=0&amp;sll=-34.594034,-58.443720&amp;sspn=0.000010,0.000014&amp;hq=&amp;hnear=Villarroel+1126,+Villa+Crespo,+Buenos+Aires,+Argentina&amp;t=m&amp;ll=-34.576126,-58.481855&amp;spn=0.019081,0.042915&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+				</a>
 				<form action="includes/envio.php" method="post" id="cont">
 						<input type="text" name="nombre" tabindex="1" required placeholder="Name...">
 						<input type="email" name="email" tabindex="2" required placeholder="E-mail...">			
 						<input type="text" name="asunto" tabindex="3" required placeholder="Subject...">				
 						<textarea name="mensaje" tabindex="4" required placeholder="Message..."></textarea>			
 						<button name="submit" type="submit" id="contact-submit">Send</button>
-						<div class="clear"></div>
 				</form>
-				<div id="listcont">
-				<ul>
-					<li id="first">BUENOS AIRES</li>
-					<li>info@francastudio.com</li>
-					<li>+54 11 4856 2207</li> 
+				<ul id="listcont1">
+					<li>info@francastudio.com<br/></li>
+					<li>+54 11 4856 2207</li>
 					<li>+54 911 6219 9298</li>	
-					<li id="first">BERLIN</li>
+					<li><strong><br/>Villarroel 1126 - Buenos Aires - Argentina</strong></li>
+				</ul>			
+				<div class="clear"></div>
+			</div><!--show arg-->
+			<div id="ger" class="show">
+				<a id="mapger" target="_blank" href="https://www.google.com/maps?sll=52.5278656999996%252C13.389009443871068&amp;sspn=0.00873993661228753%252C0.027466352689377898&amp;t=m&amp;q=Novalisstra%C3%9Fe+11%252C+Berlin%252C+Germany&amp;output=classic&amp;dg=opt">
+						<iframe id="mapg" frameborder="0" scrolling="no" src="https://www.google.com/maps?t=m&amp;q=Novalisstra%C3%9Fe+11%252C+Berlin%252C+Germany&amp;ie=UTF8&amp;hq=&amp;hnear=Novalisstra%C3%9Fe+11,+10115+Berlin,+Alemania&amp;ll=52.540919,13.35268&amp;spn=0.014094,0.042915&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+				</a>
+				<ul id="listcont2">
 					<li>+49 (0)30 240 899 151</li> 
-					<div class="clear"></div>
+					<li><strong><br/>Novalisstrasse 11 - Berlin 10115 - Germany</strong></li>
 				</ul>
-				</div>
-				<div id="map">
-					<ul>
-						<li id="arg">BS AS</li>
-						<li id="ger">BERLIN</li>
-						<div class="clear"></div>
-					</ul>
-					<div id="maparg">
-					<a  target="_blank" href="https://mapsengine.google.com/map/edit?mid=zHQzkXwGMpEY.kr07Fc7Luu-M">
-						<img class="where" src="img/map-franca.jpg"/><br/><br/>
-						<strong>Villarroel 1126 - Bs. As - Argentina</strong>
-					</a>
-					</div>
-					<div id="mapger" >
-					<a target="_blank" href="https://www.google.com/maps?sll=52.5278656999996%252C13.389009443871068&amp;sspn=0.00873993661228753%252C0.027466352689377898&amp;t=m&amp;q=Novalisstra%C3%9Fe+11%252C+Berlin%252C+Germany&amp;output=classic&amp;dg=opt">
-						<img class="where" src="img/map-pepe.jpg"/><br/><br/>
-						<strong>Novalisstrasse 11 - Berlin 10115 - Germany</strong>
-					</a>
-					</div>
-				</div>
-			</div>
+				
+				<div class="clear"></div>
+			</div><!--show ger-->
+			</div><!--grilla-->	
 		</div><!-------------fin contacto--------->	
 			
 		<!--------------------------------------social--------------------------->	

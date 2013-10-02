@@ -7,16 +7,18 @@ Sitio de presentación Franca Creative Studio
 form {
 	text-align: center;	
 	color:#000;
-	width: 100%;	
+	width: 100%;
+	height:270px;
 	display:block;
 	margin-top:10px;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 
 	}
 form input{
-	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	
 	width:100%;
-	height: 15%;
-	margin-bottom:1%;
+	height: 30px;
+	margin-bottom:7px;
 	box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
 	-webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
 	-moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
@@ -26,9 +28,10 @@ form input{
 	resize:none;
 	}
 form textarea{
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 	width: 100%;
-	height:37%;		
-	margin-bottom:1%;
+	height:100px;		
+	margin-bottom:7px;
 	box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
 	-webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
 	-moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
@@ -50,10 +53,9 @@ form input:focus, form textarea:focus {
 	}
 form button[type="submit"] {
 	cursor:pointer;
-	width:30%;
-	height:10%;
-	line-height:11%;
-	padding:2%;			
+	width:120px;
+	height:30px;
+	line-height:30px;			
 	border:none;
 	border-radius:2px;			
 	color:#000;
@@ -70,39 +72,3 @@ form button[type="submit"]:hover {
 form button[type="submit"]:active {
 	box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
 	}
-/*------------------------------Media Querys------------*/
-/*-----------------------------------------------------100*/
-@media screen and (min-width: 100px) {
-
-
-}/*fin min 100*/
-/*-----------------------------------------------------320*/
-@media screen and (min-width: 320px) {
-
-}/*fin min 320*/
-/*-----------------------------------------------------480*/
-@media screen and (min-width:480px) {
-
-
-}/*fin min 480*/
-/*-----------------------------------------------------768*/
-@media screen and (min-width: 768px) {
-form input{
-	height: 10%;
-	margin-bottom:2%;
-	}
-form textarea{
-	height:50%;		
-	margin-bottom:2%;
-	}
-form button[type="submit"] {
-	height:8%;
-	line-height:9%;
-	padding:2%;			
-	}
-
-}/*fin min 768*/
-/*-----------------------------------------------------1200*/
-@media screen and (min-width: 1200px) {
-
-}

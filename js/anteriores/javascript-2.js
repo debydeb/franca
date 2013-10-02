@@ -19,39 +19,53 @@ $(document).ready(function(){
 		'width':$(window).width()
 	});	
 	/*-----------------------------------------SECCIONES---*/	
+		//----------------------------Portfolio
 		 $grillancho = (90 * $totalancho)/100;
-		 $('.grilla').css('width', $grillancho +'px');		 
+		 $('#grilla').css('width', $grillancho +'px');		 
 		 $grilla = (80 * $total)/100;
-		 $margingrilla = ($total - $grilla)/2;//margen 
-		 $('.grilla').css('height', $grilla +'px');
-		 $('.grilla').css('margin-top', $margingrilla +'px');		 
-		 $portimg = $('.grilla').width();
+		  $margingrilla = ($total - $grilla)/2;//margen 
+		 $('#grilla').css('height', $grilla +'px');
+		 $('#grilla').css('margin-top', $margingrilla +'px');		 
+		 $portimg = $('#grilla').width();
 		 $show = $grilla - 52;
 		 $('.show').css('height',$show+'px');
 		 $('.show').css('width',$portimg+'px');
-		//--------------CONTACTO
-
-		//if($total >= 600 && $totalancho >= 1200)
-		if($total >= 600)
+//-----------------------------depende del alto y ancho
+	if ($total < $totalancho) 
 		{
-			$('#contact').css('height','500px');
-			$('#servs').css('height','450px');
-			$('#text').css('height','420px');
-			$('#port2').css('height','500px');
-			
-			$margincont = ($total - 500)/2;
-			$marginser = ($total - 450)/2;
-			$marginport = ($total - 500)/2;
-			
-			$('#contact').css('margin-top',$margincont+'px');
-			$('#servs').css('margin-top',$marginser+'px');
-			$('#port2').css('margin-top',$marginport+'px');
-			
-			$('#contact .show').css('height','450px');
-			$('#servs .show').css('height','420px');
-			$('#port2 .show').css('height','450px');
-
-		}
+		 //----------------------------Contacto
+	     $secont = (80 * $total)/100;//80% de altura
+	     $margencont = (10 * $total)/100;		 
+	     $('#formap').css('height',$secont + 'px');
+		 $('#formap').css('margin-top',$margencont + 'px');
+		 $('#text').css('height',$secont + 'px');
+		 $('#text').css('margin-top',$margencont + 'px');
+		} //fin if
+	//-----------------------------
+	if ($total > $totalancho) 
+		{
+		 //----------------------------Contacto
+	     $secont = (50 * $total)/100;//50% de altura
+	     $margencont = (25 * $total)/100;
+	     $('#formap').css('height',$secont + 'px');
+		 $('#formap').css('margin-top',$margencont + 'px');
+		 $('#text').css('height',$secont + 'px');
+		 $('#text').css('margin-top',$margencont + 'px');
+		} //fin if
+	//-----------------------------
+	//----------------------------Contacto
+		 $heightformap = $('#formap').height() - 50;
+		 $('#map').css('height',$heightformap + 'px');
+		 $('#cont').css('height',$heightformap + 'px');
+		 $altmap = ((80 * $total)/100 )- 135;
+		 $altlist = ((80 * $total)/100 )- 105;
+		 $('#maparg').css('height',$altmap+'px');
+		 $('#mapger').css('height',$altmap+'px');
+		 if( $total < 500){
+		 $('#listcont').css('height',$altlist+'px');
+		 }else{
+				$('#listcont').css('height','200px');
+				}
 		//----------------------------Social
 		$margenfb =(15 * $total)/100;
 		$('#fb').css({
@@ -79,43 +93,57 @@ $(document).ready(function(){
 			'width':$(window).width()
 		});
 		/*-----------------------------------------SECCIONES---*/		
+		//----------------------------Portfolio
 		  $grillancho = (90 * $totalancho)/100;
-		 $('.grilla').css('width', $grillancho +'px');
+		 $('#grilla').css('width', $grillancho +'px');
 		 
 		 $grilla = (80 * $total)/100;
 		 $margingrilla = ($total - $grilla)/2;//margen 
-		 $('.grilla').css('height', $grilla +'px');
-		 $('.grilla').css('margin-top', $margingrilla +'px');	
+		 $('#grilla').css('height', $grilla +'px');
+		 $('#grilla').css('margin-top', ($margingrilla - 35) +'px');
 		 
-		 $portimg = $('.grilla').width();
+		 $portimg = $('#grilla').width();
 
 		 $show = $grilla - 52;
 		 $('.show').css('height',$show+'px');
 		 $('.show').css('width',$portimg+'px');
-
-		 //--------------CONTACTO
-		//if($total >= 600 && $totalancho >= 1200)
-		if($total >= 600)
+	     
+//-----------------------------depende del alto y ancho				
+	if ($total < $totalancho) 
 		{
-			$('#contact').css('height','500px');
-			$('#servs').css('height','450px');
-			$('#text').css('height','420px');
-			$('#port2').css('height','500px');
-			
-			$margincont = ($total - 500)/2;
-			$marginser = ($total - 450)/2;
-			$marginport = ($total - 500)/2;
-			
-			$('#contact').css('margin-top',$margincont+'px');
-			$('#servs').css('margin-top',$marginser+'px');
-			$('#port2').css('margin-top',$marginport+'px');
-			
-			$('#contact .show').css('height','450px');
-			$('#servs .show').css('height','420px');
-			$('#port2 .show').css('height','450px');
-
-		}
-
+		 //----------------------------Contacto
+	     $secont = (80 * $total)/100;//80% de altura
+	     $margencont = (10 * $total)/100;
+	     $('#formap').css('height',$secont + 'px');
+		 $('#formap').css('margin-top',$margencont + 'px');
+		 $('#text').css('height',$secont + 'px');
+		 $('#text').css('margin-top',$margencont + 'px');
+		} //fin if
+	//-----------------------------
+	if ($total > $totalancho) 
+		{
+		 //----------------------------Contacto
+	     $secont = (50 * $total)/100;//50% de altura
+	     $margencont = (25 * $total)/100;
+	     $('#formap').css('height',$secont + 'px');
+		 $('#formap').css('margin-top',$margencont + 'px');
+		 $('#text').css('height',$secont + 'px');
+		 $('#text').css('margin-top',$margencont + 'px');
+		} //fin if
+	 //-----------------------------fin depende del alto y ancho	
+		//----------------------------Contacto
+		 $heightformap = $('#formap').height() - 50;
+		 $('#map').css('height',$heightformap + 'px');
+		 $('#cont').css('height',$heightformap + 'px');
+		 $altmap = ((80 * $total)/100 )- 135;
+		 $altlist = ((80 * $total)/100 )- 105;
+		 $('#maparg').css('height',$altmap+'px');
+		 $('#mapger').css('height',$altmap+'px');
+		 if( $total < 500){
+		 $('#listcont').css('height',$altlist+'px');
+		 }else{
+				$('#listcont').css('height','200px');
+				}
 		//----------------------------Social
 		$margenfb =(15 * $total)/100;
 		$('#fb').css({
@@ -201,10 +229,7 @@ $('nav li').click(function(){
 		$('#ph').fadeOut();
 		$('#web').css('display','block');
 		$('#dg').css('display','none');
-		$('#ph').css('display','none');	
-		$('#s2').removeClass('this');
-		$('#s3').removeClass('this');
-		$(this).addClass('this');
+		$('#ph').css('display','none');		
 	});
 	
 	$('#s2').click(function(){
@@ -214,9 +239,6 @@ $('nav li').click(function(){
 		$('#web').css('display','none');
 		$('#dg').css('display','block');
 		$('#ph').css('display','none');
-		$('#s1').removeClass('this');
-		$('#s3').removeClass('this');
-		$(this).addClass('this');
 	});
 	
 	$('#s3').click(function(){
@@ -226,31 +248,53 @@ $('nav li').click(function(){
 		$('#web').css('display','none');
 		$('#dg').css('display','none');
 		$('#ph').css('display','block');
-		$('#s2').removeClass('this');
-		$('#s1').removeClass('this');
-		$(this).addClass('this');
 	});
 	//fin portfolio -web - dg - ph
 /*---------------------------------------------*/
-	//submenu contacto -arg/ger
-	$('#c1').click(function(){
-		$('#c2').removeClass('this');
-		$(this).addClass('this');
-		$('#arg').fadeIn();
-		$('#ger').fadeOut(function(){
-			$('#ger').css('display','none');
+	//submenu contacto -form - phones - map
+	$('#mail').click(function(){
+		$('#cont').fadeIn();
+		$('#listcont').fadeOut();
+		$('#map').fadeOut();
+		$('#cont').css('display','block');
+		$('#listcont').css('display','none');
+		$('#map').css('display','none');		
+	});
+	
+	$('#phone').click(function(){
+		$('#cont').fadeOut();
+		$('#listcont').fadeIn();
+		$('#map').fadeOut();
+		$('#cont').css('display','none');
+		$('#listcont').css('display','block');
+		$('#map').css('display','none');
+	});
+	
+	$('#map1').click(function(){
+		$('#cont').fadeOut();
+		$('#listcont').fadeOut();
+		$('#map').fadeIn();
+		$('#map').fadeIn();
+
+		$('#cont').css('display','none');
+		$('#listcont').css('display','none');
+		$('#map').css('display','block');
+	});
+	
+	$('#arg').click(function(){
+		$('#maparg').css('display','block');
+		$('#mapger').fadeOut(function(){
+			$('#mapger').css('display','none');
+		});
+	});
+	
+	$('#ger').click(function(){
+		$('#mapger').fadeIn();
+		$('#maparg').fadeOut(function(){
+			$('#maparg').css('display','none');
 		});
 		
 	});
-	$('#c2').click(function(){
-		$('#c1').removeClass('this');
-		$(this).addClass('this');
-		$('#ger').fadeIn();
-		$('#arg').fadeOut(function(){
-			$('#arg').css('display','none');
-		});
-	});
-
 	
 	
 	//fin submenu contacto -form - phones - map	
@@ -281,7 +325,6 @@ $('.show img').click(function(){
 
 	//----------------css para los mockup	
 		$width = $(window).width();
-		$heightwindow = $(window).height()-65;
 		$('#display').css('height',$total - 5 + 'px');
 		$('#display').css('width',$width + 'px');
 
@@ -293,16 +336,6 @@ $('.show img').click(function(){
 			$('#mock').css('height',$mockheight + 'px');
 			$('#mock').css('margin-top',$mockmargin + 'px');
 			$('#mock').css('width','auto');
-			
-			if($width >= 1200 && $heightwindow >= 600)
-				{
-				$('#mock').css('height','500px');
-				$mockheight = $('#mock').height();
-				$mockmargin = ($total - $mockheight)/2;
-				$('#mock').css('margin-top',$mockmargin + 'px');
-				$('#mock').css('width','auto');
-				}
-
 		} //fin if
 
 		if ($total > $width) 
@@ -315,8 +348,6 @@ $('.show img').click(function(){
 			$('#mock').css('width',$mockw + 'px');
 			$('#mock').css('margin-top',$mockmargin2 + 'px');			
 		} //fin if
-		
-		
 		
 		$(window).resize(function(){	
 		$width = $(window).width();
@@ -331,17 +362,6 @@ $('.show img').click(function(){
 			$('#mock').css('height',$mockheight + 'px');
 			$('#mock').css('margin-top',$mockmargin + 'px');
 			$('#mock').css('width','auto');
-			
-			if($width >= 1200 && $heightwindow >= 600)
-				{
-				$('#mock').css('height','500px');
-				$mockheight = $('#mock').height();
-				$mockmargin = ($total - $mockheight)/2;
-				$('#mock').css('margin-top',$mockmargin + 'px');
-				$('#mock').css('width','auto');
-		
-				}
-
 		} //fin if
 		
 		if ($total > $width) 
